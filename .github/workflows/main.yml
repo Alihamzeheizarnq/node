@@ -34,6 +34,6 @@ jobs:
           # Install sshpass on the runner
           sudo apt-get install -y sshpass
           # Use sshpass to SSH into the server with a password and run commands
-          sshpass -p ${{ secrets.SSH_PASSWORD }} ssh -o StrictHostKeyChecking=no user@host 'docker pull alihamzehei/node:v1.${{ github.run_number }} && docker run -d --name my-app -p 80:80 alihamzehei/node:v1.${{ github.run_number }}'
+          sshpass -p ${{ secrets.SSH_PASSWORD }} ssh -o StrictHostKeyChecking=no root@46.249.102.74 'docker pull alihamzehei/node:v1.${{ github.run_number }} && docker run -d --name my-app -p 80:80 alihamzehei/node:v1.${{ github.run_number }}'
         env:
           SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
