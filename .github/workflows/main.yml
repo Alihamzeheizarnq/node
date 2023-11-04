@@ -40,6 +40,6 @@ jobs:
             docker kill $running_containers
           else
             echo "No running containers to stop."
-          fi && docker pull alihamzehei/node:v1.${{ github.run_number }} && docker run -d --name my-app -p 80:80 alihamzehei/node:v1.${{ github.run_number }}'
+          fi && docker pull alihamzehei/node:v1.${{ github.run_number }} && docker run -d --name my-app${{ github.run_number }} -p 80:80 alihamzehei/node:v1.${{ github.run_number }}'
         env:
           SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
