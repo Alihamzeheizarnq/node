@@ -1,5 +1,5 @@
 # .github/workflows/main.yml
-name: Node.js CI/CD
+name: Node.js CI/CD v1
 on:
   push:
     branches:
