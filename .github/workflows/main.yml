@@ -16,6 +16,7 @@ jobs:
 
       - name: Install dependencies
         run: docker build -t alihamzehei/node:v1.${{ github.run_number }} .
+        working-directory: ${{ github.workspace }}
       - name: login dockerhub
         uses: docker/login-action@v3.0.0
         with:
