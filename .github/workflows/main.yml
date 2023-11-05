@@ -29,6 +29,10 @@ jobs:
         with:
           tag_name: v1.${{ github.run_number }}
           release_name: Release v1.${{ github.run_number }}
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
       - name: Deploy to hosting environment
         run: |
           # Install sshpass on the runner
